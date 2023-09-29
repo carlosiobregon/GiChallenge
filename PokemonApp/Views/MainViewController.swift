@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class MainViewController: UIViewController {
     
@@ -26,6 +27,20 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        
+        
+        Service.shared.execute(pokemonPath: "25", expecting: PokemonInfo.self) { [weak self] result in
+            switch result {
+            case .success(let data):
+                self?.pokemonName.text = data.name
+                print(data)
+            case .failure(let error):
+                // Maneja el error aquí
+                print(error)
+            }
+        }
+        
     }
 
 
