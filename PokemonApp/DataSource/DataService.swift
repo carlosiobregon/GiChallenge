@@ -41,7 +41,11 @@ final class Service {
         apiManager.getRequest(request.urlString) { (result: Result<GetPokemonResponse, AFError>) in
             switch result {
             case .success(let data):
-                let pokemon = PokemonInfo(name: data.name, experience: data.base_experience, abilities: data.abilities.map{$0.ability.name}, sprites: data.sprites.front_default)
+                let pokemon = PokemonInfo(
+                    name: data.name.capitalized,
+                    experience: data.base_experience,
+                    abilities: data.abilities.map{$0.ability.name},
+                    imageUrl:data.sprites.front_default)
                 completion(.success(pokemon))
                 print(data)
             case .failure(let error):

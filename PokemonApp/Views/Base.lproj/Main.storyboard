@@ -37,9 +37,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6C7-4X-ABK">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6C7-4X-ABK">
                                 <rect key="frame" x="32" y="440" width="329" height="132.33333333333337"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="sectionIndexBackgroundColor" red="1" green="0.94509803920000002" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AbilityTableViewCell" id="vEn-we-han" customClass="AbilityTableViewCell" customModule="PokemonApp" customModuleProvider="target">
@@ -77,12 +76,16 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="xnH-mR-Zdk" secondAttribute="trailing" constant="10" id="w0j-uU-Ju1"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
                                         <connections>
                                             <outlet property="abilityLabel" destination="xnH-mR-Zdk" id="Qvg-b1-Ch3"/>
                                             <outlet property="bulletPoint" destination="wda-bR-wLk" id="Rcs-8E-7XN"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <sections/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Experiencia:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umA-Nh-x7h" userLabel="Experiencia">
                                 <rect key="frame" x="32" y="597.33333333333337" width="329" height="24"/>
@@ -114,6 +117,9 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="-"/>
+                                        <connections>
+                                            <action selector="decrease:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NOb-dL-wTb"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFh-bV-7Ui">
                                         <rect key="frame" x="204.66666666666666" y="30" width="79.999999999999972" height="40"/>
@@ -123,6 +129,9 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="+"/>
+                                        <connections>
+                                            <action selector="increase:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bWz-0R-3Ld"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -165,6 +174,7 @@
                     </view>
                     <connections>
                         <outlet property="abilitiesLabel" destination="hgQ-hp-hzM" id="Of3-4i-rdv"/>
+                        <outlet property="abilitiesTableView" destination="6C7-4X-ABK" id="S5p-R6-yBJ"/>
                         <outlet property="amountExperienceLabel" destination="iGx-92-hZI" id="zSB-xk-8yT"/>
                         <outlet property="experienceLabel" destination="umA-Nh-x7h" id="X7N-SR-kwf"/>
                         <outlet property="minusButton" destination="oFh-bV-7Ui" id="oIa-Bk-jR0"/>

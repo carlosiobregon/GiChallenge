@@ -9,7 +9,7 @@ import Foundation
 
 struct PokemonInfo {
     let name: String
-    let experience: Int
+    var experience: Int
     let abilities: [String]
-    let sprites: String
+    let imageUrl: String
 }
