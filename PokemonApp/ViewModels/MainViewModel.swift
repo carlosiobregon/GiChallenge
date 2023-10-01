@@ -10,8 +10,8 @@ import Combine
 
 class MainViewModel: NSObject {
     
-    var name = String()
-    var urlImage = String()
+    @Published var name = String()
+    @Published var urlImage = String()
     @Published var abilities = [String]()
     @Published var experience: Int = 0
 

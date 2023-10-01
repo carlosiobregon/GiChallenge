@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ves-N2-SIx">
-                                <rect key="frame" x="103.66666666666669" y="93" width="186" height="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ves-N2-SIx">
+                                <rect key="frame" x="32" y="93" width="329" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="MNp-SZ-lxj"/>
                                 </constraints>
@@ -25,11 +25,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hare.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="E9l-fS-Tjj" userLabel="Pokemon image">
-                                <rect key="frame" x="76.666666666666686" y="160.66666666666669" width="240" height="217.66666666666669"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E9l-fS-Tjj" userLabel="Pokemon image">
+                                <rect key="frame" x="76.666666666666686" y="150" width="240" height="211"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Habilidades:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgQ-hp-hzM" userLabel="Habilidades">
-                                <rect key="frame" x="32" y="404" width="329" height="24"/>
+                                <rect key="frame" x="32" y="386" width="329" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="rUK-p8-qXa"/>
                                 </constraints>
@@ -38,7 +38,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6C7-4X-ABK">
-                                <rect key="frame" x="32" y="440" width="329" height="132.33333333333337"/>
+                                <rect key="frame" x="32" y="422" width="329" height="128"/>
                                 <color key="sectionIndexBackgroundColor" red="1" green="0.94509803920000002" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AbilityTableViewCell" id="vEn-we-han" customClass="AbilityTableViewCell" customModule="PokemonApp" customModuleProvider="target">
@@ -88,7 +88,7 @@
                                 <sections/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Experiencia:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umA-Nh-x7h" userLabel="Experiencia">
-                                <rect key="frame" x="32" y="597.33333333333337" width="329" height="24"/>
+                                <rect key="frame" x="32" y="575" width="329" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="fDD-FC-ISa"/>
                                 </constraints>
@@ -97,7 +97,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGx-92-hZI" userLabel="Amount experience">
-                                <rect key="frame" x="90.666666666666686" y="643.33333333333337" width="212" height="38.333333333333371"/>
+                                <rect key="frame" x="90.666666666666686" y="621" width="212" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="OdD-iy-IxF"/>
                                     <constraint firstAttribute="width" constant="212" id="RhU-HH-D8R"/>
@@ -107,7 +107,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="poC-2G-Bxq" userLabel="Buttons View">
-                                <rect key="frame" x="32" y="689.66666666666663" width="329" height="100"/>
+                                <rect key="frame" x="32" y="661" width="329" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RN6-S4-0mV">
                                         <rect key="frame" x="44.666666666666671" y="30" width="80" height="40"/>
@@ -156,7 +156,9 @@
                             <constraint firstItem="hgQ-hp-hzM" firstAttribute="top" secondItem="E9l-fS-Tjj" secondAttribute="bottom" constant="25" id="KgG-zD-C0L"/>
                             <constraint firstItem="6C7-4X-ABK" firstAttribute="top" secondItem="hgQ-hp-hzM" secondAttribute="bottom" constant="12" id="LWZ-4c-kQ0"/>
                             <constraint firstItem="Ves-N2-SIx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="34" id="MFT-mw-QTk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ves-N2-SIx" secondAttribute="trailing" constant="32" id="RtS-WD-TgG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="poC-2G-Bxq" secondAttribute="trailing" constant="32" id="Sab-iP-sHe"/>
+                            <constraint firstItem="Ves-N2-SIx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="Sk3-z3-NBa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hgQ-hp-hzM" secondAttribute="trailing" constant="32" id="UD1-Xd-HKZ"/>
                             <constraint firstItem="hgQ-hp-hzM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="Uhx-9q-rRH"/>
                             <constraint firstItem="E9l-fS-Tjj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vdb-gE-CGK"/>
@@ -167,8 +169,7 @@
                             <constraint firstItem="E9l-fS-Tjj" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.610687" id="gA6-d9-67a"/>
                             <constraint firstItem="iGx-92-hZI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hsV-ZY-6lL"/>
                             <constraint firstItem="6C7-4X-ABK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="iN2-KC-AxQ"/>
-                            <constraint firstItem="E9l-fS-Tjj" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.247653" id="qSe-FF-upK"/>
-                            <constraint firstItem="E9l-fS-Tjj" firstAttribute="top" secondItem="Ves-N2-SIx" secondAttribute="bottom" constant="36" id="rBN-Pn-cxM"/>
+                            <constraint firstItem="E9l-fS-Tjj" firstAttribute="top" secondItem="Ves-N2-SIx" secondAttribute="bottom" constant="25" id="rBN-Pn-cxM"/>
                             <constraint firstItem="poC-2G-Bxq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="zFC-2Z-n2J"/>
                         </constraints>
                     </view>
@@ -189,7 +190,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="hare.fill" catalog="system" width="128" height="88"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -25,7 +25,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //waiting view
+        view.showBlurLoader()
         setupTableView()
         bindViewModel()
         viewModel.fetchPokemon()
@@ -37,38 +37,61 @@ class MainViewController: UIViewController {
     }
     
     func bindViewModel() {
+        viewModel.$name.receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                self?.setPokemonName()
+            }
+            .store(in: &cancellables)
+        
+        viewModel.$urlImage.receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                self?.setPokemonImage()
+            }
+            .store(in: &cancellables)
+        
         viewModel.$abilities
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in
-                self?.setView()
                 self?.abilitiesTableView.reloadData()
             }
             .store(in: &cancellables)
+        
         viewModel.$experience
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in
-                self?.setView()
+                self?.setExperience()
             }
             .store(in: &cancellables)
     }
     
-    func setView() {
-        self.pokemonName.text = viewModel.name
-        self.amountExperienceLabel.text = "\(viewModel.experience )"
+    // MARK: - Setup View
+    private func setPokemonName() {
+        pokemonName.text = viewModel.name
+    }
+    
+    private func setExperience() {
+        self.amountExperienceLabel.text = "\(viewModel.experience)"
+    }
+    
+    private func setPokemonImage() {
         viewModel.fetchImage { [weak self] result in
             switch result {
             case .success(let data):
                 DispatchQueue.main.async {
                     let image = UIImage(data: data)
                     self?.pokemonImage.image = image
+                    self?.view.removeBluerLoader()
                 }
             case .failure(let error):
                 print(String(describing: error))
+                self?.view.removeBluerLoader()
                 break
             }
         }
     }
     
+    
+    // MARK: - IBActions
     @IBAction func increase(_ sender: Any) {
         viewModel.increaseExperience()
     }

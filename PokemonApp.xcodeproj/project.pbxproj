@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04641B9B2ACA09D300E4BDA7 /* UIView+Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04641B9A2ACA09D300E4BDA7 /* UIView+Loader.swift */; };
 		04AE647B2AC698890042D132 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE647A2AC698890042D132 /* APIManager.swift */; };
 		04AE647D2AC69C2E0042D132 /* GetPokemonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE647C2AC69C2E0042D132 /* GetPokemonResponse.swift */; };
 		04AE647F2AC6A3F20042D132 /* PokemonInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE647E2AC6A3F10042D132 /* PokemonInfo.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04641B9A2ACA09D300E4BDA7 /* UIView+Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Loader.swift"; sourceTree = "<group>"; };
 		04AE647A2AC698890042D132 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		04AE647C2AC69C2E0042D132 /* GetPokemonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPokemonResponse.swift; sourceTree = "<group>"; };
 		04AE647E2AC6A3F10042D132 /* PokemonInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonInfo.swift; sourceTree = "<group>"; };
@@ -109,6 +111,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04641B992ACA093500E4BDA7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				04C1D9912AC772C10037702B /* ImageLoader.swift */,
+				04641B9A2ACA09D300E4BDA7 /* UIView+Loader.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		04C1D9862AC7652D0037702B /* APIClient */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,8 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				04E8219B2AC5F060001C4A78 /* LaunchScreen.storyboard */,
+				04E821962AC5F05E001C4A78 /* Main.storyboard */,
 				04E821992AC5F060001C4A78 /* Assets.xcassets */,
-				04C1D9912AC772C10037702B /* ImageLoader.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -151,7 +162,6 @@
 			children = (
 				04E821C02AC6275C001C4A78 /* AbilityTableViewCell.swift */,
 				04E821942AC5F05E001C4A78 /* MainViewController.swift */,
-				04E821962AC5F05E001C4A78 /* Main.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -204,6 +214,7 @@
 				04C1D98B2AC7664D0037702B /* Models */,
 				04C1D9872AC765430037702B /* DataSource */,
 				04C1D9862AC7652D0037702B /* APIClient */,
+				04641B992ACA093500E4BDA7 /* Utils */,
 				04C1D9892AC765830037702B /* Resources */,
 				04E8219E2AC5F060001C4A78 /* Info.plist */,
 			);
@@ -498,6 +509,7 @@
 				04AE647B2AC698890042D132 /* APIManager.swift in Sources */,
 				04E821C12AC6275C001C4A78 /* AbilityTableViewCell.swift in Sources */,
 				04E821932AC5F05E001C4A78 /* SceneDelegate.swift in Sources */,
+				04641B9B2ACA09D300E4BDA7 /* UIView+Loader.swift in Sources */,
 				04AE647F2AC6A3F20042D132 /* PokemonInfo.swift in Sources */,
 				04AE64852AC6B0DB0042D132 /* DataService.swift in Sources */,
 				04C1D98E2AC76A060037702B /* MainViewModel.swift in Sources */,
